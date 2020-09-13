@@ -36,9 +36,11 @@ body {
 
 .header__inner {
     padding-left: 13%;
+    padding-right: 5%;
 }
 .header__top {
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-around;
     align-items: center;
     padding-top: 35px;
@@ -91,6 +93,7 @@ body {
     padding: 20px 30px;
     color: #fff;
     transition: all 0.3s;
+    margin-left: 30px;
 }
 
 .btn:hover {
@@ -154,12 +157,13 @@ body {
 .sec2__left {
     width: 65%;
     background-color: #62D0DF;
-    padding-left: 180px;
+    padding-left: 13%;
     color: #fff;
+    padding-right: 20px;
 }
 
 .left__inner {
-    width: 555px;
+    max-width: 555px;
     height: 100%;
     display: flex;
     flex-direction: column;
@@ -185,10 +189,11 @@ body {
 .section__3 {
     position: relative;
     height: 480px;
+    width: 100%;
 }
 
 .sec3__text {
-    width: 590px;
+    max-width: 590px;
     position: absolute;
     left: 30%;
     top: 130px;
@@ -218,32 +223,30 @@ body {
 
 .section__4 {
     width: 100%;
-    height: 360px;
     display: flex;
+    flex-wrap: wrap;
 }
 
-.section4__inner1 {
-    background-color: #FFE2DE;
+.section4__inner {
     width: 25%;
     padding-top: 95px;
+    height: 360px;
+}
+.section4__inner1 {
+
+    background-color: #FFE2DE;
 }
 
 .section4__inner2 {
     background-color: #C4E769;
-    width: 25%;
-    padding-top: 95px;
 }
 
 .section4__inner3 {
     background-color: #62D0DF;
-    width: 25%;
-    padding-top: 95px;
 }
 
 .section4__inner4 {
     background-color: #0052C1;
-    width: 25%;
-    padding-top: 95px;
 }
 
 .sec4__before {
@@ -258,7 +261,7 @@ body {
     display: block;
     background-color: #fff;
     height: 2px;
-    width: 225px;
+    width: 65%;
 }
 
 .dot {
@@ -333,6 +336,7 @@ body {
     display: flex;
     justify-content: center;
     position: relative;
+    flex-wrap: wrap;
 }
 
 .sec5__before:before {
@@ -341,21 +345,25 @@ body {
     display: block;
     background-color: #fff;
     height: 2px;
-    width: 340px;
+    width: 70%;
 }
 
 
 /*Section__6*/
 
 .section__6 {
-    height: 542px;
     display: flex;
     flex-wrap: wrap;
+    width: 100%;
+    justify-content: space-around;
 }
 
 .sec6__inner {
-    width: 33.33333%;
-    padding-left: 105px;
+    min-width: 470px;
+    max-width: 480px;
+    padding: 0 15px 0 15px;
+    height: 262px;
+    text-align: center;
 }
 .sec6__title {
     font-size: 28px;
@@ -370,7 +378,8 @@ body {
     line-height: 25px;
     letter-spacing: -0.03em;
     color: rgba(34, 53, 111, 0.5);
-    width: 300px;
+    max-width: 300px;
+    margin: 0 auto;
 }
 
 
@@ -380,17 +389,24 @@ body {
 .section__7 {
     display: flex;
     height: 800px;
+    overflow: hidden;
 }
 
 .sec7__left {
-    width: 33.3333%;
+    width: 39%;
+}
+
+.sec7__img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 
 
 .sec7__right {
-    width: 66.6666%;
+    width: 61%;
     display: flex;
-    padding-left: 105px;
+    padding-left: 10%;
     flex-direction: column;
     justify-content: space-around;
 }
@@ -418,6 +434,8 @@ body {
     display: flex;
     color: #fff;
     height: 800px;
+    width: 100%;
+    overflow: hidden;
 
 }
 
@@ -425,9 +443,9 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: space-around;
-    width: 66.6666%;
+    width: 60%;
     background-color: #22356F;
-    padding-left: 180px;
+    padding-left: 13%;
 }
 
 .sec8__title {
@@ -459,6 +477,9 @@ body {
     color: #fff;
 }
 
+.sec8__right {
+    width: 30%;
+}
 /*Footer*/
 
 .footer {
@@ -471,15 +492,26 @@ body {
     color: rgba(34, 53, 111, 0.5);
     display: flex;
     height: 380px;
+    width: 100%;
+    overflow: hidden;
+}
+.footer__inner {
+    padding: 0 15px;
+}
+.footer__left {
+    width: 50%;
 }
 
-.footer__left {
+.footer__img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 
 .footer__right {
     display: flex;
-    justify-content: space-around;
-    width: 66%;
+    justify-content: space-between;
+    width: 50%;
 }
 
 .footer__title {
@@ -492,7 +524,7 @@ body {
 }
 
 .footer__text {
-    width: 200px;
+    max-width: 200px;
 }
 .footer__tel {
     padding-top: 30px;
@@ -505,6 +537,7 @@ body {
 .footer__legal {
     background-color: #62D0DF;
     height: 80px;
+    width: 100%;
 }
 
 
@@ -512,13 +545,21 @@ body {
     padding-left: 180px;
     color: #fff;
     padding-top: 35px;
-
 }
 
 /*Media*/
 
 
 
+
+.sec2__left
+@media (max-width: 768px) {
+    .header__inner {
+        padding: 0 30px;
+    }
+}
+
+@media (max-width: 680px)
 
 
 
