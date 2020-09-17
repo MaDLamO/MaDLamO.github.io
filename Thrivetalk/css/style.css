@@ -21,7 +21,6 @@ body {
     font-weight: 400;
     color: #22356F;
     max-width: 1440px;
-    min-width: 500px;
     background-color: #fff;
 }
 
@@ -57,6 +56,7 @@ body {
 .nav__ul {
     display: flex;
     list-style: none;
+    padding-left: 0;
 }
 
 .nav__link {
@@ -66,6 +66,10 @@ body {
     font-size: 14px;
     position: relative;
 
+}
+
+.nav__1 {
+    margin-left: 0;
 }
 
 .nav__link:after {
@@ -94,7 +98,6 @@ body {
     padding: 20px 30px;
     color: #fff;
     transition: all 0.3s;
-    margin-left: 50px;
 }
 
 .btn:hover {
@@ -580,13 +583,11 @@ body {
     }
 
     .header__logo {
-        padding-left: 80px;
         padding-bottom: 15px;
     }
 
     .btn {
         margin-top: 15px;
-        margin-left: 70px;
     }
 
     .sec2__text {
@@ -640,6 +641,8 @@ body {
 }
 
 @media (max-width: 550px) {
+
+
     .header__h1 {
         font-size: 35px;
     }
@@ -651,9 +654,27 @@ body {
     .sec2__text {
         font-size: 18px;
     }
+
+
 }
 
+@media (max-width: 400px) {
 
+    .header__h1 {
+        padding-bottom: 50px;
+    }
+
+    .haeder__text {
+        padding-bottom: 30px;
+        font-size: 18px;
+        line-height: 25px;
+    }
+
+    .btn__org {
+        margin-top: 30px;
+    }
+
+}
 
 
 
